@@ -7,22 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7DF773123EB25F6005BE0F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF773023EB25F6005BE0F2 /* AppDelegate.swift */; };
-		E7DF773323EB25F6005BE0F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF773223EB25F6005BE0F2 /* ContentView.swift */; };
 		E7DF773523EB25F7005BE0F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF773423EB25F7005BE0F2 /* Assets.xcassets */; };
 		E7DF773823EB25F7005BE0F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF773723EB25F7005BE0F2 /* Preview Assets.xcassets */; };
 		E7DF773B23EB25F7005BE0F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF773923EB25F7005BE0F2 /* Main.storyboard */; };
+		E7DF774923EB266F005BE0F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF774723EB266E005BE0F2 /* AppDelegate.swift */; };
+		E7DF774A23EB266F005BE0F2 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF774823EB266E005BE0F2 /* EventListView.swift */; };
+		E7DF775023EB2694005BE0F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7DF774F23EB2694005BE0F2 /* Info.plist */; };
+		E7DF775623EB26DE005BE0F2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775523EB26DE005BE0F2 /* Event.swift */; };
+		E7DF775823EB26F4005BE0F2 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775723EB26F4005BE0F2 /* Identifier.swift */; };
+		E7DF775C23EB27BF005BE0F2 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775B23EB27BF005BE0F2 /* EventStore.swift */; };
+		E7DF776023EB2844005BE0F2 /* EventListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775F23EB2844005BE0F2 /* EventListPresenter.swift */; };
+		E7DF776223EB28DB005BE0F2 /* EventRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF776123EB28DB005BE0F2 /* EventRowViewModel.swift */; };
+		E7DF776423EC2605005BE0F2 /* EventListPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF776323EC2605005BE0F2 /* EventListPresenterImplementation.swift */; };
+		E7DF777723ED968F005BE0F2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF777623ED968F005BE0F2 /* RootView.swift */; };
+		E7DF777A23ED99EA005BE0F2 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF777923ED99EA005BE0F2 /* EventDetailView.swift */; };
+		E7DF777D23ED9A1F005BE0F2 /* EventDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF777C23ED9A1F005BE0F2 /* EventDetailPresenter.swift */; };
+		E7DF778023ED9A5A005BE0F2 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF777F23ED9A5A005BE0F2 /* EventRow.swift */; };
+		E7DF778423ED9B52005BE0F2 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF778323ED9B52005BE0F2 /* EventDetailViewModel.swift */; };
+		E7DF778823EDA0B0005BE0F2 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF778723EDA0B0005BE0F2 /* DateViewModel.swift */; };
+		E7DF778A23EDA19F005BE0F2 /* EventDetailPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF778923EDA19F005BE0F2 /* EventDetailPresenterImplementation.swift */; };
+		E7DF778C23EDABB0005BE0F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7DF778B23EDABB0005BE0F2 /* Localizable.strings */; };
+		E7DF778F23EDAD17005BE0F2 /* AlignmentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF778E23EDAD17005BE0F2 /* AlignmentModifier.swift */; };
+		E7DF779223EDD985005BE0F2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF779123EDD985005BE0F2 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7DF772D23EB25F6005BE0F2 /* LeMonde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeMonde.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DF773023EB25F6005BE0F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7DF773223EB25F6005BE0F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7DF773423EB25F7005BE0F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7DF773723EB25F7005BE0F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7DF773A23EB25F7005BE0F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E7DF773C23EB25F7005BE0F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7DF773D23EB25F7005BE0F2 /* LeMonde.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeMonde.entitlements; sourceTree = "<group>"; };
+		E7DF774723EB266E005BE0F2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7DF774823EB266E005BE0F2 /* EventListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		E7DF774E23EB2694005BE0F2 /* LeMonde.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = LeMonde.entitlements; sourceTree = "<group>"; };
+		E7DF774F23EB2694005BE0F2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7DF775523EB26DE005BE0F2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E7DF775723EB26F4005BE0F2 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		E7DF775B23EB27BF005BE0F2 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		E7DF775F23EB2844005BE0F2 /* EventListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListPresenter.swift; sourceTree = "<group>"; };
+		E7DF776123EB28DB005BE0F2 /* EventRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowViewModel.swift; sourceTree = "<group>"; };
+		E7DF776323EC2605005BE0F2 /* EventListPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListPresenterImplementation.swift; sourceTree = "<group>"; };
+		E7DF777623ED968F005BE0F2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E7DF777923ED99EA005BE0F2 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		E7DF777C23ED9A1F005BE0F2 /* EventDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailPresenter.swift; sourceTree = "<group>"; };
+		E7DF777F23ED9A5A005BE0F2 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		E7DF778323ED9B52005BE0F2 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		E7DF778723EDA0B0005BE0F2 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		E7DF778923EDA19F005BE0F2 /* EventDetailPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailPresenterImplementation.swift; sourceTree = "<group>"; };
+		E7DF778B23EDABB0005BE0F2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = LeMonde/Resources/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		E7DF778E23EDAD17005BE0F2 /* AlignmentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentModifier.swift; sourceTree = "<group>"; };
+		E7DF779123EDD985005BE0F2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +88,10 @@
 		E7DF772F23EB25F6005BE0F2 /* LeMonde */ = {
 			isa = PBXGroup;
 			children = (
-				E7DF773023EB25F6005BE0F2 /* AppDelegate.swift */,
-				E7DF773223EB25F6005BE0F2 /* ContentView.swift */,
-				E7DF773423EB25F7005BE0F2 /* Assets.xcassets */,
-				E7DF773923EB25F7005BE0F2 /* Main.storyboard */,
-				E7DF773C23EB25F7005BE0F2 /* Info.plist */,
-				E7DF773D23EB25F7005BE0F2 /* LeMonde.entitlements */,
+				E7DF774B23EB2673005BE0F2 /* Resources */,
+				E7DF774623EB266E005BE0F2 /* Classes */,
 				E7DF773623EB25F7005BE0F2 /* Preview Content */,
+				E7DF774D23EB2694005BE0F2 /* Configuration */,
 			);
 			path = LeMonde;
 			sourceTree = "<group>";
@@ -70,8 +100,179 @@
 			isa = PBXGroup;
 			children = (
 				E7DF773723EB25F7005BE0F2 /* Preview Assets.xcassets */,
+				E7DF778B23EDABB0005BE0F2 /* Localizable.strings */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7DF774623EB266E005BE0F2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF774723EB266E005BE0F2 /* AppDelegate.swift */,
+				E7DF779023EDD979005BE0F2 /* Extension */,
+				E7DF775423EB26D2005BE0F2 /* Core */,
+				E7DF775223EB26C2005BE0F2 /* UI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E7DF774B23EB2673005BE0F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF773423EB25F7005BE0F2 /* Assets.xcassets */,
+				E7DF773923EB25F7005BE0F2 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7DF774D23EB2694005BE0F2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF774E23EB2694005BE0F2 /* LeMonde.entitlements */,
+				E7DF774F23EB2694005BE0F2 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E7DF775223EB26C2005BE0F2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778523EDA0A1005BE0F2 /* Shared */,
+				E7DF777523ED9681005BE0F2 /* Root */,
+				E7DF775D23EB2820005BE0F2 /* EventList */,
+				E7DF777823ED99D5005BE0F2 /* EventDetail */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		E7DF775423EB26D2005BE0F2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF775A23EB27B0005BE0F2 /* Shared */,
+				E7DF775923EB27A7005BE0F2 /* Event */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E7DF775923EB27A7005BE0F2 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF775523EB26DE005BE0F2 /* Event.swift */,
+				E7DF775B23EB27BF005BE0F2 /* EventStore.swift */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
+		E7DF775A23EB27B0005BE0F2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF775723EB26F4005BE0F2 /* Identifier.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		E7DF775D23EB2820005BE0F2 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778123ED9B0A005BE0F2 /* Presenter */,
+				E7DF777E23ED9A4C005BE0F2 /* View */,
+				E7DF775E23EB283B005BE0F2 /* ViewModel */,
+			);
+			name = EventList;
+			sourceTree = "<group>";
+		};
+		E7DF775E23EB283B005BE0F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF776123EB28DB005BE0F2 /* EventRowViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		E7DF777523ED9681005BE0F2 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF777623ED968F005BE0F2 /* RootView.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		E7DF777823ED99D5005BE0F2 /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778223ED9B40005BE0F2 /* Presenter */,
+				E7DF777B23ED99F6005BE0F2 /* ViewModel */,
+				E7DF777923ED99EA005BE0F2 /* EventDetailView.swift */,
+			);
+			name = EventDetail;
+			sourceTree = "<group>";
+		};
+		E7DF777B23ED99F6005BE0F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778323ED9B52005BE0F2 /* EventDetailViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		E7DF777E23ED9A4C005BE0F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF774823EB266E005BE0F2 /* EventListView.swift */,
+				E7DF777F23ED9A5A005BE0F2 /* EventRow.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E7DF778123ED9B0A005BE0F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF775F23EB2844005BE0F2 /* EventListPresenter.swift */,
+				E7DF776323EC2605005BE0F2 /* EventListPresenterImplementation.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E7DF778223ED9B40005BE0F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF777C23ED9A1F005BE0F2 /* EventDetailPresenter.swift */,
+				E7DF778923EDA19F005BE0F2 /* EventDetailPresenterImplementation.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E7DF778523EDA0A1005BE0F2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778D23EDACE3005BE0F2 /* ViewModifier */,
+				E7DF778623EDA0A6005BE0F2 /* ViewModel */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		E7DF778623EDA0A6005BE0F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778723EDA0B0005BE0F2 /* DateViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		E7DF778D23EDACE3005BE0F2 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF778E23EDAD17005BE0F2 /* AlignmentModifier.swift */,
+			);
+			name = ViewModifier;
+			sourceTree = "<group>";
+		};
+		E7DF779023EDD979005BE0F2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF779123EDD985005BE0F2 /* Color.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +333,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DF778C23EDABB0005BE0F2 /* Localizable.strings in Resources */,
+				E7DF775023EB2694005BE0F2 /* Info.plist in Resources */,
 				E7DF773B23EB25F7005BE0F2 /* Main.storyboard in Resources */,
 				E7DF773823EB25F7005BE0F2 /* Preview Assets.xcassets in Resources */,
 				E7DF773523EB25F7005BE0F2 /* Assets.xcassets in Resources */,
@@ -145,8 +348,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DF773323EB25F6005BE0F2 /* ContentView.swift in Sources */,
-				E7DF773123EB25F6005BE0F2 /* AppDelegate.swift in Sources */,
+				E7DF775C23EB27BF005BE0F2 /* EventStore.swift in Sources */,
+				E7DF778A23EDA19F005BE0F2 /* EventDetailPresenterImplementation.swift in Sources */,
+				E7DF776423EC2605005BE0F2 /* EventListPresenterImplementation.swift in Sources */,
+				E7DF774A23EB266F005BE0F2 /* EventListView.swift in Sources */,
+				E7DF779223EDD985005BE0F2 /* Color.swift in Sources */,
+				E7DF775623EB26DE005BE0F2 /* Event.swift in Sources */,
+				E7DF778823EDA0B0005BE0F2 /* DateViewModel.swift in Sources */,
+				E7DF778423ED9B52005BE0F2 /* EventDetailViewModel.swift in Sources */,
+				E7DF776023EB2844005BE0F2 /* EventListPresenter.swift in Sources */,
+				E7DF777723ED968F005BE0F2 /* RootView.swift in Sources */,
+				E7DF777D23ED9A1F005BE0F2 /* EventDetailPresenter.swift in Sources */,
+				E7DF778F23EDAD17005BE0F2 /* AlignmentModifier.swift in Sources */,
+				E7DF778023ED9A5A005BE0F2 /* EventRow.swift in Sources */,
+				E7DF777A23ED99EA005BE0F2 /* EventDetailView.swift in Sources */,
+				E7DF775823EB26F4005BE0F2 /* Identifier.swift in Sources */,
+				E7DF776223EB28DB005BE0F2 /* EventRowViewModel.swift in Sources */,
+				E7DF774923EB266F005BE0F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +499,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LeMonde/LeMonde.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LeMonde/Configuration/LeMonde.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LeMonde/Preview Content\"";
 				DEVELOPMENT_TEAM = C7G63Q6LZ9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = LeMonde/Info.plist;
+				INFOPLIST_FILE = LeMonde/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -304,14 +522,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LeMonde/LeMonde.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LeMonde/Configuration/LeMonde.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LeMonde/Preview Content\"";
 				DEVELOPMENT_TEAM = C7G63Q6LZ9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = LeMonde/Info.plist;
+				INFOPLIST_FILE = LeMonde/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

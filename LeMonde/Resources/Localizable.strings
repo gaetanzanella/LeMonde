@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LeMonde
+
+  Created by Gaétan Zanella on 07/02/2020.
+  Copyright © 2020 Gaetan Zanella. All rights reserved.
+*/
+
+"add_to_calendar_action_title" = "Add to calendar";
