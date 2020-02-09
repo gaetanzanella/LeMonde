@@ -3,19 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7028A6423F05C5C00DC8FD7 /* DateViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7028A6323F05C5C00DC8FD7 /* DateViewModelMapper.swift */; };
+		E7028A6623F05C7600DC8FD7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7028A6523F05C7600DC8FD7 /* DateFormatter.swift */; };
+		E7AB00A123EEDB1500C39FC8 /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */; };
+		E7AB00A523EEDE4200C39FC8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = E7AB00A423EEDE4200C39FC8 /* Core */; };
+		E7AB00A823EF029E00C39FC8 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00A723EF029E00C39FC8 /* DependencyProvider.swift */; };
+		E7AB00AB23EF03B200C39FC8 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00AA23EF03B200C39FC8 /* RootCoordinator.swift */; };
+		E7AB00AD23EF075500C39FC8 /* EventRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00AC23EF075500C39FC8 /* EventRootView.swift */; };
+		E7AB00B023EF125800C39FC8 /* EventDetailViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00AF23EF125800C39FC8 /* EventDetailViewModelMapper.swift */; };
+		E7AB00B423EF13C500C39FC8 /* EventListViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00B323EF13C500C39FC8 /* EventListViewModelMapper.swift */; };
 		E7DF773523EB25F7005BE0F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF773423EB25F7005BE0F2 /* Assets.xcassets */; };
 		E7DF773823EB25F7005BE0F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF773723EB25F7005BE0F2 /* Preview Assets.xcassets */; };
 		E7DF773B23EB25F7005BE0F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF773923EB25F7005BE0F2 /* Main.storyboard */; };
 		E7DF774923EB266F005BE0F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF774723EB266E005BE0F2 /* AppDelegate.swift */; };
 		E7DF774A23EB266F005BE0F2 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF774823EB266E005BE0F2 /* EventListView.swift */; };
 		E7DF775023EB2694005BE0F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7DF774F23EB2694005BE0F2 /* Info.plist */; };
-		E7DF775623EB26DE005BE0F2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775523EB26DE005BE0F2 /* Event.swift */; };
-		E7DF775823EB26F4005BE0F2 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775723EB26F4005BE0F2 /* Identifier.swift */; };
-		E7DF775C23EB27BF005BE0F2 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775B23EB27BF005BE0F2 /* EventStore.swift */; };
 		E7DF776023EB2844005BE0F2 /* EventListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF775F23EB2844005BE0F2 /* EventListPresenter.swift */; };
 		E7DF776223EB28DB005BE0F2 /* EventRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF776123EB28DB005BE0F2 /* EventRowViewModel.swift */; };
 		E7DF776423EC2605005BE0F2 /* EventListPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF776323EC2605005BE0F2 /* EventListPresenterImplementation.swift */; };
@@ -32,6 +38,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7028A6323F05C5C00DC8FD7 /* DateViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModelMapper.swift; sourceTree = "<group>"; };
+		E7028A6523F05C7600DC8FD7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
+		E7AB00A223EEDC6B00C39FC8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
+		E7AB00A723EF029E00C39FC8 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		E7AB00AA23EF03B200C39FC8 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		E7AB00AC23EF075500C39FC8 /* EventRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRootView.swift; sourceTree = "<group>"; };
+		E7AB00AF23EF125800C39FC8 /* EventDetailViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModelMapper.swift; sourceTree = "<group>"; };
+		E7AB00B323EF13C500C39FC8 /* EventListViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModelMapper.swift; sourceTree = "<group>"; };
 		E7DF772D23EB25F6005BE0F2 /* LeMonde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeMonde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DF773423EB25F7005BE0F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7DF773723EB25F7005BE0F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -40,9 +55,6 @@
 		E7DF774823EB266E005BE0F2 /* EventListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		E7DF774E23EB2694005BE0F2 /* LeMonde.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = LeMonde.entitlements; sourceTree = "<group>"; };
 		E7DF774F23EB2694005BE0F2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7DF775523EB26DE005BE0F2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		E7DF775723EB26F4005BE0F2 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
-		E7DF775B23EB27BF005BE0F2 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		E7DF775F23EB2844005BE0F2 /* EventListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListPresenter.swift; sourceTree = "<group>"; };
 		E7DF776123EB28DB005BE0F2 /* EventRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowViewModel.swift; sourceTree = "<group>"; };
 		E7DF776323EC2605005BE0F2 /* EventListPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListPresenterImplementation.swift; sourceTree = "<group>"; };
@@ -63,17 +75,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AB00A523EEDE4200C39FC8 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7AB009F23EEDB0500C39FC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF777923ED99EA005BE0F2 /* EventDetailView.swift */,
+				E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E7AB00A323EEDE4200C39FC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7AB00A623EF028800C39FC8 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB00A723EF029E00C39FC8 /* DependencyProvider.swift */,
+			);
+			name = DI;
+			sourceTree = "<group>";
+		};
+		E7AB00A923EF03A300C39FC8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB00AA23EF03B200C39FC8 /* RootCoordinator.swift */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		E7AB00AE23EF124B00C39FC8 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB00AF23EF125800C39FC8 /* EventDetailViewModelMapper.swift */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		E7AB00B223EF13B400C39FC8 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB00B323EF13C500C39FC8 /* EventListViewModelMapper.swift */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
 		E7DF772423EB25F6005BE0F2 = {
 			isa = PBXGroup;
 			children = (
+				E7AB00A223EEDC6B00C39FC8 /* Core */,
 				E7DF772F23EB25F6005BE0F2 /* LeMonde */,
 				E7DF772E23EB25F6005BE0F2 /* Products */,
+				E7AB00A323EEDE4200C39FC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +173,8 @@
 			children = (
 				E7DF774723EB266E005BE0F2 /* AppDelegate.swift */,
 				E7DF779023EDD979005BE0F2 /* Extension */,
-				E7DF775423EB26D2005BE0F2 /* Core */,
+				E7AB00A623EF028800C39FC8 /* DI */,
+				E7AB00A923EF03A300C39FC8 /* Coordinator */,
 				E7DF775223EB26C2005BE0F2 /* UI */,
 			);
 			path = Classes;
@@ -145,32 +209,6 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
-		E7DF775423EB26D2005BE0F2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E7DF775A23EB27B0005BE0F2 /* Shared */,
-				E7DF775923EB27A7005BE0F2 /* Event */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		E7DF775923EB27A7005BE0F2 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				E7DF775523EB26DE005BE0F2 /* Event.swift */,
-				E7DF775B23EB27BF005BE0F2 /* EventStore.swift */,
-			);
-			name = Event;
-			sourceTree = "<group>";
-		};
-		E7DF775A23EB27B0005BE0F2 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				E7DF775723EB26F4005BE0F2 /* Identifier.swift */,
-			);
-			name = Shared;
-			sourceTree = "<group>";
-		};
 		E7DF775D23EB2820005BE0F2 /* EventList */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +222,7 @@
 		E7DF775E23EB283B005BE0F2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E7AB00B223EF13B400C39FC8 /* Mapper */,
 				E7DF776123EB28DB005BE0F2 /* EventRowViewModel.swift */,
 			);
 			name = ViewModel;
@@ -193,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E7DF777623ED968F005BE0F2 /* RootView.swift */,
+				E7AB00AC23EF075500C39FC8 /* EventRootView.swift */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -200,9 +240,9 @@
 		E7DF777823ED99D5005BE0F2 /* EventDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E7AB009F23EEDB0500C39FC8 /* View */,
 				E7DF778223ED9B40005BE0F2 /* Presenter */,
 				E7DF777B23ED99F6005BE0F2 /* ViewModel */,
-				E7DF777923ED99EA005BE0F2 /* EventDetailView.swift */,
 			);
 			name = EventDetail;
 			sourceTree = "<group>";
@@ -210,6 +250,7 @@
 		E7DF777B23ED99F6005BE0F2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E7AB00AE23EF124B00C39FC8 /* Mapper */,
 				E7DF778323ED9B52005BE0F2 /* EventDetailViewModel.swift */,
 			);
 			name = ViewModel;
@@ -255,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				E7DF778723EDA0B0005BE0F2 /* DateViewModel.swift */,
+				E7028A6323F05C5C00DC8FD7 /* DateViewModelMapper.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -271,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				E7DF779123EDD985005BE0F2 /* Color.swift */,
+				E7028A6523F05C7600DC8FD7 /* DateFormatter.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -291,6 +334,9 @@
 			dependencies = (
 			);
 			name = LeMonde;
+			packageProductDependencies = (
+				E7AB00A423EEDE4200C39FC8 /* Core */,
+			);
 			productName = LeMonde;
 			productReference = E7DF772D23EB25F6005BE0F2 /* LeMonde.app */;
 			productType = "com.apple.product-type.application";
@@ -348,21 +394,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DF775C23EB27BF005BE0F2 /* EventStore.swift in Sources */,
 				E7DF778A23EDA19F005BE0F2 /* EventDetailPresenterImplementation.swift in Sources */,
 				E7DF776423EC2605005BE0F2 /* EventListPresenterImplementation.swift in Sources */,
 				E7DF774A23EB266F005BE0F2 /* EventListView.swift in Sources */,
 				E7DF779223EDD985005BE0F2 /* Color.swift in Sources */,
-				E7DF775623EB26DE005BE0F2 /* Event.swift in Sources */,
+				E7AB00A123EEDB1500C39FC8 /* EventHeaderView.swift in Sources */,
 				E7DF778823EDA0B0005BE0F2 /* DateViewModel.swift in Sources */,
+				E7AB00B023EF125800C39FC8 /* EventDetailViewModelMapper.swift in Sources */,
 				E7DF778423ED9B52005BE0F2 /* EventDetailViewModel.swift in Sources */,
+				E7AB00AD23EF075500C39FC8 /* EventRootView.swift in Sources */,
 				E7DF776023EB2844005BE0F2 /* EventListPresenter.swift in Sources */,
 				E7DF777723ED968F005BE0F2 /* RootView.swift in Sources */,
+				E7AB00B423EF13C500C39FC8 /* EventListViewModelMapper.swift in Sources */,
 				E7DF777D23ED9A1F005BE0F2 /* EventDetailPresenter.swift in Sources */,
+				E7AB00AB23EF03B200C39FC8 /* RootCoordinator.swift in Sources */,
 				E7DF778F23EDAD17005BE0F2 /* AlignmentModifier.swift in Sources */,
+				E7028A6423F05C5C00DC8FD7 /* DateViewModelMapper.swift in Sources */,
+				E7028A6623F05C7600DC8FD7 /* DateFormatter.swift in Sources */,
 				E7DF778023ED9A5A005BE0F2 /* EventRow.swift in Sources */,
 				E7DF777A23ED99EA005BE0F2 /* EventDetailView.swift in Sources */,
-				E7DF775823EB26F4005BE0F2 /* Identifier.swift in Sources */,
+				E7AB00A823EF029E00C39FC8 /* DependencyProvider.swift in Sources */,
 				E7DF776223EB28DB005BE0F2 /* EventRowViewModel.swift in Sources */,
 				E7DF774923EB266F005BE0F2 /* AppDelegate.swift in Sources */,
 			);
@@ -563,6 +614,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7AB00A423EEDE4200C39FC8 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7DF772523EB25F6005BE0F2 /* Project object */;
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct DateViewModel {
+struct DateViewModel: Hashable {
     let label: String
 }

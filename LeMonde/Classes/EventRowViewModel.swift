@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct EventRowViewModel: Identifiable {
+struct EventRowViewModel: Identifiable, Hashable {
     let id: String
     let name: String
-    let date: String
+    let date: DateViewModel
 }

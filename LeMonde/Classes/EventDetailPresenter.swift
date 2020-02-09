@@ -13,7 +13,9 @@ enum EventDetailAction {
 }
 
 protocol EventDetailPresenter: ObservableObject {
+
     var viewModel: EventDetailViewModel { get }
 
+    func start(id: String)
     func didSelect(_ action: EventDetailAction)
 }

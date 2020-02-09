@@ -11,7 +11,7 @@ import SwiftUI
 struct RootView<Master: View, Detail: View>: View {
 
     let master: Master
-    let detail: Detail
+    let detail: Detail?
 
     var body: some View {
         NavigationView {

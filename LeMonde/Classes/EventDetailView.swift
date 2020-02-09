@@ -7,15 +7,24 @@
 //
 
 import SwiftUI
+import Core
 
 struct EventDetailView<Presenter: EventDetailPresenter>: View {
 
     @ObservedObject var presenter: Presenter
 
+    let id: String
+
+    init(id: String, presenter: Presenter) {
+        self.id = id
+        self.presenter = presenter
+        self.presenter.start(id: self.id)
+    }
+
     var body: some View {
         VStack {
             ScrollView {
-                VStack(spacing: 8.0) {
+                VStack(alignment: .leading, spacing: 8.0) {
                     EventHeaderView(detail: presenter.viewModel)
                     Text(presenter.viewModel.description)
                     Spacer()
@@ -29,31 +38,6 @@ struct EventDetailView<Presenter: EventDetailPresenter>: View {
                 }
                 .padding()
             }
-        }
-    }
-}
-
-struct EventDetailView_Previews: PreviewProvider {
-
-    static var previews: some View {
-        EventDetailView(
-            presenter: EventDetailPresenterImplementation()
-        )
-    }
-}
-
-struct EventHeaderView: View {
-
-    let detail: EventDetailViewModel
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(detail.name).font(.title)
-            Divider()
-            ForEach(detail.dates, id: \.label) { date in
-                Text(date.label).padding([.top, .bottom], 4.0)
-            }
-            Divider()
         }
     }
 }

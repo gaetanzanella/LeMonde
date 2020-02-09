@@ -7,11 +7,20 @@
 //
 
 import Combine
+import Core
 
 class EventListPresenterImplementation: EventListPresenter {
 
-    @Published var events: [EventRowViewModel] = [
-        EventRowViewModel(id: "1", name: "George", date: "12 Janv"),
-        EventRowViewModel(id: "2", name: "Brassens", date: "13 Janv")
-    ]
+    private let store: EventStore
+
+    @Published var events: [EventRowViewModel] = []
+
+    init(store: EventStore) {
+        self.store = store
+    }
+
+    func start() {
+        store.synchronize {}
+        events = EventListViewModelMapper(events: store.fetchEvents()).viewModels()
+    }
 }

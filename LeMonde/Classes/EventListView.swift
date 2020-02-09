@@ -11,10 +11,13 @@ import SwiftUI
 struct EventListView<Presenter: EventListPresenter>: View {
 
     @ObservedObject var presenter: Presenter
+    @Binding var selectedEvent: EventRowViewModel?
 
     var body: some View {
-        List(presenter.events) { event in
+        List(presenter.events, id: \.self, selection: $selectedEvent) { event in
             EventRow(event: event)
+        }.onAppear {
+            self.presenter.start()
         }
     }
 }

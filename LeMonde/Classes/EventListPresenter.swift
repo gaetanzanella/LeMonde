@@ -10,5 +10,8 @@ import Foundation
 import Combine
 
 protocol EventListPresenter: ObservableObject {
+
     var events: [EventRowViewModel] { get }
+
+    func start()
 }

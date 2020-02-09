@@ -15,7 +15,7 @@ struct EventRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(event.name)
-            Text(event.date)
+            Text(event.date.label)
         }
     }
 }

@@ -14,4 +14,12 @@ struct EventDetailViewModel {
     let dates: [DateViewModel]
     let registrationDate: DateViewModel
     let description: String
+
+    static let empty = EventDetailViewModel(
+        id: "",
+        name: "",
+        dates: [],
+        registrationDate: DateViewModel(label: ""),
+        description: ""
+    )
 }
