@@ -8,14 +8,11 @@
 
 import Combine
 
-enum EventDetailAction {
-    case addToCalendar
-}
-
 protocol EventDetailPresenter: ObservableObject {
 
     var viewModel: EventDetailViewModel { get }
 
+    var isFavorite: Bool { get set }
+
     func start(id: String)
-    func didSelect(_ action: EventDetailAction)
 }

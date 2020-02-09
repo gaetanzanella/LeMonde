@@ -9,18 +9,39 @@ import Foundation
 
 public class EventStore {
 
-    private var events = [
-        Event(id: Event.ID(id: "A"), name: "A", mainDate: Date(), dates: [Date()], registrationLimitDate: Date(), description: "AHAHA"),
-        Event(id: Event.ID(id: "B"), name: "B", mainDate: Date(), dates: [Date()], registrationLimitDate: Date(), description: "AHAHA"),
-        Event(id: Event.ID(id: "C"), name: "C", mainDate: Date(), dates: [Date()], registrationLimitDate: Date(), description: "AHAHA"),
-        Event(id: Event.ID(id: "D"), name: "D", mainDate: Date(), dates: [Date()], registrationLimitDate: Date(), description: "AHAHA"),
-    ]
+    private var events: [Event] = []
 
-    public init() {}
+    private let calendar: EventCalendar
+
+    public convenience init() {
+        self.init(calendar: EventCalendar())
+    }
+
+    internal init(calendar: EventCalendar) {
+        self.calendar = calendar
+    }
 
     // MARK: - Public
 
     public func synchronize(completion: @escaping () -> Void) {
+        let ref = Date(timeIntervalSince1970: 1581265255.651691)
+        let names = ["A", "B", "C"]
+        events = names.enumerated().map { i, name in
+            let eDate = ref.addingTimeInterval(Double(i) * 24 * 60 * 60)
+            return Event(
+                id: Event.ID(id: name),
+                isFavorite: false,
+                name: name,
+                mainDate: eDate,
+                dates: [eDate],
+                registrationLimitDate: eDate,
+                description: "AHAHA",
+                url: URL(fileURLWithPath: name)
+            )
+        }
+        events = events.map {
+            $0.withIsFavorite(calendar.isEventRegistrationReminderScheduled($0))
+        }
         completion()
     }
 
@@ -30,5 +51,15 @@ public class EventStore {
 
     public func fetchEvent(with id: Event.ID) -> Event? {
         events.first { $0.id == id }
+    }
+
+    public func addToFavorite(_ event: Event) {
+        calendar.scheduleRegistrationReminder(for: event)
+        synchronize {}
+    }
+
+    public func removeFromFavorites(_ event: Event) {
+        calendar.cancelRegistrationReminder(for: event)
+        synchronize {}
     }
 }

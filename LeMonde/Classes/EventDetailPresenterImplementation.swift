@@ -12,6 +12,7 @@ import Foundation
 class EventDetailPresenterImplementation: EventDetailPresenter {
 
     @Published private var event: Event?
+    private var id: String?
 
     private var store: EventStore
 
@@ -21,13 +22,32 @@ class EventDetailPresenterImplementation: EventDetailPresenter {
 
     // MARK: - EventDetailPresenter
 
+    var isFavorite: Bool {
+        set {
+            guard let event = event else { return }
+            if event.isFavorite {
+                store.removeFromFavorites(event)
+            } else {
+                store.addToFavorite(event)
+            }
+            reload()
+        }
+        get {
+            event?.isFavorite ?? false
+        }
+    }
+
     var viewModel: EventDetailViewModel {
         event.flatMap { EventDetailViewModelMapper(event: $0).viewModel() } ?? .empty
     }
 
     func start(id: String) {
-        event = store.fetchEvent(with: Event.ID(id: id))
+        self.id = id
+        reload()
     }
 
-    func didSelect(_ action: EventDetailAction) {}
+    private func reload() {
+        guard let id = id else { return }
+        event = store.fetchEvent(with: Event.ID(id: id))
+    }
 }

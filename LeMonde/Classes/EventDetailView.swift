@@ -33,8 +33,8 @@ struct EventDetailView<Presenter: EventDetailPresenter>: View {
             }
             HStack {
                 Spacer()
-                Button("add_to_calendar_action_title") {
-                    self.presenter.didSelect(.addToCalendar)
+                Toggle(isOn: $presenter.isFavorite) {
+                    Text("add_to_calendar_action_title")
                 }
                 .padding()
             }
