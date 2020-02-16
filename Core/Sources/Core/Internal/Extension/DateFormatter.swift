@@ -14,4 +14,10 @@ extension DateFormatter {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
+
+    static let eventDate: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH'h'mm dd/mm/yyyy"
+        return formatter
+    }()
 }

@@ -14,12 +14,15 @@ struct EventMapper {
     let resource: RESTEvent
 
     func event() throws -> Event {
-        Event(
+        guard let startDate = DateFormatter.eventDate.date(from: resource.startDate) else {
+            fatalError("Wrong date format")
+        }
+        return Event(
             id: Event.ID(id: resource.event_id),
             isFavorite: false,
             name: resource.title,
-            mainDate: resource.reservation_start_date,
-            dates: [resource.reservation_start_date],
+            mainDate: startDate,
+            dates: [startDate],
             registrationLimitDate: resource.reservation_start_date,
             description: resource.description.html(),
             url: URL(fileURLWithPath: "")
@@ -36,5 +39,12 @@ private extension String {
         } catch {
             return ""
         }
+    }
+}
+
+private extension RESTEvent {
+
+    var startDate: String {
+        "\(start_date_hour) \(start_date)"
     }
 }
