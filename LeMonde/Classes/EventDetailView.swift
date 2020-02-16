@@ -32,12 +32,13 @@ struct EventDetailView<Presenter: EventDetailPresenter>: View {
                 .padding()
             }
             HStack {
-                Spacer()
                 Toggle(isOn: $presenter.isFavorite) {
                     Text("add_to_calendar_action_title")
                 }
-                .padding()
+                Spacer()
+                Text(presenter.viewModel.registrationDate.label)
             }
+            .padding()
         }
     }
 }

@@ -18,6 +18,7 @@ struct EventListViewModelMapper {
             EventRowViewModel(
                 id: event.id.id,
                 name: event.name,
+                isFavorite: event.isFavorite,
                 date: DateViewModelMapper(date: event.mainDate).short()
             )
         }

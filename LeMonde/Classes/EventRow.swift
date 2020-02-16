@@ -13,9 +13,29 @@ struct EventRow: View {
     let event: EventRowViewModel
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(event.name)
-            Text(event.date.label)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(event.name)
+                Text(event.date.label)
+            }
+            Spacer()
+            if event.isFavorite {
+                Image("star").resizable().frame(width: 15, height: 15)
+            }
         }
+    }
+}
+
+struct EventRow_Preview: PreviewProvider {
+
+    static var previews: some View {
+        EventRow(
+            event: EventRowViewModel(
+                id: "A",
+                name: "Deux amoureux Paris",
+                isFavorite: true,
+                date: DateViewModel(label: "23 Janvier")
+            )
+        ).frame(width: 400)
     }
 }

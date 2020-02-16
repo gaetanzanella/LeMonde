@@ -9,7 +9,10 @@ import Foundation
 
 public class EventStore {
 
+    public typealias Observer = () -> Void
+
     private var events: [Event] = []
+    private var observers: [Observer] = []
 
     private let calendar: EventCalendar
     private let eventGateway: EventRemoteGateway
@@ -38,7 +41,12 @@ public class EventStore {
                 self.handleEventsFetch(events)
                 completion()
             }
+            self.notifyObserver()
         }
+    }
+
+    public func addObserver(_ block: @escaping Observer) {
+        observers.append(block)
     }
 
     public func fetchEvents() -> [Event] {
@@ -51,17 +59,25 @@ public class EventStore {
 
     public func addToFavorite(_ event: Event) {
         calendar.scheduleRegistrationReminder(for: event)
-        synchronize {}
+        handleEventsFetch(events)
+        notifyObserver()
     }
 
     public func removeFromFavorites(_ event: Event) {
         calendar.cancelRegistrationReminder(for: event)
-        synchronize {}
+        handleEventsFetch(events)
+        notifyObserver()
     }
+
+    // MARK: - Private
 
     private func handleEventsFetch(_ events: [Event]) {
         self.events = events.map {
             $0.withIsFavorite(calendar.isEventRegistrationReminderScheduled($0))
         }
+    }
+
+    private func notifyObserver() {
+        observers.forEach { $0() }
     }
 }

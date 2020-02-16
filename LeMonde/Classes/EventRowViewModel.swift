@@ -11,5 +11,6 @@ import Foundation
 struct EventRowViewModel: Identifiable, Hashable {
     let id: String
     let name: String
+    let isFavorite: Bool
     let date: DateViewModel
 }

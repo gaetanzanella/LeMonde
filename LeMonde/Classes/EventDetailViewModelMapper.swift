@@ -17,7 +17,7 @@ struct EventDetailViewModelMapper {
             id: event.id.id,
             name: event.name,
             dates: event.dates.map { DateViewModelMapper(date: $0).long() },
-            registrationDate: DateViewModelMapper(date: event.mainDate).long(),
+            registrationDate: DateViewModelMapper(date: event.registrationLimitDate).long(),
             description: event.description
         )
     }

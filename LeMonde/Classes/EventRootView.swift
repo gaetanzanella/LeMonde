@@ -10,13 +10,13 @@ import SwiftUI
 
 struct EventRootView<MasterPresenter: EventListPresenter, DetailPresenter: EventDetailPresenter>: View {
 
-    @State private var selectedRow: EventRowViewModel?
+    @State private var selectedRow: EventRowViewModel.ID?
 
     let master: MasterPresenter
     let detail: DetailPresenter
 
     var body: some View {
-        let id = selectedRow?.id
+        let id = selectedRow
         return RootView(
             master: EventListView(presenter: master, selectedEvent: $selectedRow),
             detail: id.flatMap { EventDetailView(id: $0, presenter: detail) }
