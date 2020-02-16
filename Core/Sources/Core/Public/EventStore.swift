@@ -12,37 +12,33 @@ public class EventStore {
     private var events: [Event] = []
 
     private let calendar: EventCalendar
+    private let eventGateway: EventRemoteGateway
 
     public convenience init() {
-        self.init(calendar: EventCalendar())
+        self.init(
+            calendar: EventCalendar(),
+            eventGateway: EventRemoteGateway(httpClient: HTTPClient())
+        )
     }
 
-    internal init(calendar: EventCalendar) {
+    internal init(calendar: EventCalendar,
+                  eventGateway: EventRemoteGateway) {
         self.calendar = calendar
+        self.eventGateway = eventGateway
     }
 
     // MARK: - Public
 
     public func synchronize(completion: @escaping () -> Void) {
-        let ref = Date(timeIntervalSince1970: 1581265255.651691)
-        let names = ["A", "B", "C"]
-        events = names.enumerated().map { i, name in
-            let eDate = ref.addingTimeInterval(Double(i) * 24 * 60 * 60)
-            return Event(
-                id: Event.ID(id: name),
-                isFavorite: false,
-                name: name,
-                mainDate: eDate,
-                dates: [eDate],
-                registrationLimitDate: eDate,
-                description: "AHAHA",
-                url: URL(fileURLWithPath: name)
-            )
+        eventGateway.fetchLastestEvents { result in
+            switch result {
+            case .failure:
+                break
+            case let .success(events):
+                self.handleEventsFetch(events)
+                completion()
+            }
         }
-        events = events.map {
-            $0.withIsFavorite(calendar.isEventRegistrationReminderScheduled($0))
-        }
-        completion()
     }
 
     public func fetchEvents() -> [Event] {
@@ -61,5 +57,11 @@ public class EventStore {
     public func removeFromFavorites(_ event: Event) {
         calendar.cancelRegistrationReminder(for: event)
         synchronize {}
+    }
+
+    private func handleEventsFetch(_ events: [Event]) {
+        self.events = events.map {
+            $0.withIsFavorite(calendar.isEventRegistrationReminderScheduled($0))
+        }
     }
 }

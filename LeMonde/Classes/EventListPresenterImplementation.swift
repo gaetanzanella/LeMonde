@@ -20,7 +20,8 @@ class EventListPresenterImplementation: EventListPresenter {
     }
 
     func start() {
-        store.synchronize {}
-        events = EventListViewModelMapper(events: store.fetchEvents()).viewModels()
+        store.synchronize {
+            self.events = EventListViewModelMapper(events: self.store.fetchEvents()).viewModels()
+        }
     }
 }
