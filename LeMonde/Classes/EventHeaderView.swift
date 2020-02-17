@@ -16,8 +16,12 @@ struct EventHeaderView: View {
         VStack(alignment: .leading) {
             Text(detail.name).font(.title)
             Divider()
-            ForEach(detail.dates, id: \.label) { date in
-                Text(date.label).padding([.top, .bottom], 4.0)
+            HStack {
+                ForEach(detail.dates, id: \.label) { date in
+                    Text(date.label).padding([.top, .bottom], 4.0)
+                }
+                Spacer()
+                StatusView(detail.eventType)
             }
             Divider()
         }

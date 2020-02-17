@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E7028A6423F05C5C00DC8FD7 /* DateViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7028A6323F05C5C00DC8FD7 /* DateViewModelMapper.swift */; };
 		E7028A6623F05C7600DC8FD7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7028A6523F05C7600DC8FD7 /* DateFormatter.swift */; };
+		E71B048A23F9633B003BD598 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71B048923F9633B003BD598 /* StatusView.swift */; };
 		E7AB00A123EEDB1500C39FC8 /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */; };
 		E7AB00A523EEDE4200C39FC8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = E7AB00A423EEDE4200C39FC8 /* Core */; };
 		E7AB00A823EF029E00C39FC8 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00A723EF029E00C39FC8 /* DependencyProvider.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		E7028A6323F05C5C00DC8FD7 /* DateViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModelMapper.swift; sourceTree = "<group>"; };
 		E7028A6523F05C7600DC8FD7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		E71B048923F9633B003BD598 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
 		E7AB00A223EEDC6B00C39FC8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
 		E7AB00A723EF029E00C39FC8 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7619A0D23F5780B008BF515 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E71B048923F9633B003BD598 /* StatusView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		E7AB009F23EEDB0500C39FC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +296,7 @@
 		E7DF778523EDA0A1005BE0F2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E7619A0D23F5780B008BF515 /* View */,
 				E7DF778D23EDACE3005BE0F2 /* ViewModifier */,
 				E7DF778623EDA0A6005BE0F2 /* ViewModel */,
 			);
@@ -402,6 +413,7 @@
 				E7DF778823EDA0B0005BE0F2 /* DateViewModel.swift in Sources */,
 				E7AB00B023EF125800C39FC8 /* EventDetailViewModelMapper.swift in Sources */,
 				E7DF778423ED9B52005BE0F2 /* EventDetailViewModel.swift in Sources */,
+				E71B048A23F9633B003BD598 /* StatusView.swift in Sources */,
 				E7AB00AD23EF075500C39FC8 /* EventRootView.swift in Sources */,
 				E7DF776023EB2844005BE0F2 /* EventListPresenter.swift in Sources */,
 				E7DF777723ED968F005BE0F2 /* RootView.swift in Sources */,

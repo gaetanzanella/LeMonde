@@ -21,6 +21,7 @@ struct EventMapper {
             id: Event.ID(id: resource.event_id),
             isFavorite: false,
             name: resource.title,
+            type: resource.event_type,
             mainDate: startDate,
             dates: [startDate],
             registrationLimitDate: resource.reservation_start_date,

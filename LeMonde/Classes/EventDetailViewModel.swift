@@ -11,6 +11,7 @@ import Foundation
 struct EventDetailViewModel {
     let id: String
     let name: String
+    let eventType: String
     let dates: [DateViewModel]
     let registrationDate: DateViewModel
     let description: String
@@ -18,6 +19,7 @@ struct EventDetailViewModel {
     static let empty = EventDetailViewModel(
         id: "",
         name: "",
+        eventType: "",
         dates: [],
         registrationDate: DateViewModel(label: ""),
         description: ""

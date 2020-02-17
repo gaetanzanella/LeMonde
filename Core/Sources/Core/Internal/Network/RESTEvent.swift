@@ -15,5 +15,6 @@ struct RESTEvent: Decodable {
     let start_date: String
     let end_date: String?
     let start_date_hour: String
+    let event_type: String
     let end_date_hour: String?
 }
