@@ -26,7 +26,7 @@ struct EventMapper {
             dates: [startDate],
             registrationLimitDate: resource.reservation_start_date,
             description: resource.description.html(),
-            url: URL(fileURLWithPath: "")
+            url: URL(string: "https://evenements-abonnes.lemonde.fr/event_details?event_id=\(resource.event_id)")!
         )
     }
 }

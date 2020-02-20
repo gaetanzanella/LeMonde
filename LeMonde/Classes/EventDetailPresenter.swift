@@ -15,4 +15,5 @@ protocol EventDetailPresenter: ObservableObject {
     var isFavorite: Bool { get set }
 
     func start(id: String)
+    func show()
 }

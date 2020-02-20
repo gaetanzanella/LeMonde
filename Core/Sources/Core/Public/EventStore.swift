@@ -16,18 +16,23 @@ public class EventStore {
 
     private let calendar: EventCalendar
     private let eventGateway: EventRemoteGateway
+    private let eventLocalGateway: EventLocalGateway
 
     public convenience init() {
         self.init(
             calendar: EventCalendar(),
-            eventGateway: EventRemoteGateway(httpClient: HTTPClient())
+            eventGateway: EventRemoteGateway(httpClient: HTTPClient()),
+            eventLocalGateway: EventLocalGateway(storageURL: FileManager.default.url(for: .eventStorage))
         )
     }
 
     internal init(calendar: EventCalendar,
-                  eventGateway: EventRemoteGateway) {
+                  eventGateway: EventRemoteGateway,
+                  eventLocalGateway: EventLocalGateway) {
         self.calendar = calendar
         self.eventGateway = eventGateway
+        self.eventLocalGateway = eventLocalGateway
+        reloadEvents()
     }
 
     // MARK: - Public
@@ -72,7 +77,13 @@ public class EventStore {
     // MARK: - Private
 
     private func handleEventsFetch(_ events: [Event]) {
-        self.events = events.map {
+        let update = EventLocalGatewayUpdate(events: events)
+        eventLocalGateway.perform(update)
+        reloadEvents()
+    }
+
+    private func reloadEvents() {
+        self.events = eventLocalGateway.fetchEvents().map {
             $0.withIsFavorite(calendar.isEventRegistrationReminderScheduled($0))
         }
     }

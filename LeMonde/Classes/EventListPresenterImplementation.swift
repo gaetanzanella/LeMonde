@@ -20,9 +20,14 @@ class EventListPresenterImplementation: EventListPresenter {
     }
 
     func start() {
-        store.addObserver {
-            self.events = EventListViewModelMapper(events: self.store.fetchEvents()).viewModels()
+        reloadView()
+        store.addObserver { [weak self] in
+            self?.reloadView()
         }
         store.synchronize {}
+    }
+
+    private func reloadView() {
+        events = EventListViewModelMapper(events: self.store.fetchEvents()).viewModels()
     }
 }

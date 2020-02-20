@@ -30,7 +30,7 @@ class EventRemoteGateway {
                 var events = self?.makeEvents(list: list) ?? []
                 let group = DispatchGroup()
                 let lock = NSLock()
-                let pages = min(list.mdata.pages, 5)
+                let pages = list.mdata.pages
                 (2...pages).forEach { page in
                     group.enter()
                     self?.fetchEventList(atPage: page) { result in

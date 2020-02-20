@@ -14,7 +14,7 @@ struct EventListViewModelMapper {
     let events: [Event]
 
     func viewModels() -> [EventRowViewModel] {
-        events.map { event in
+        events.sorted(by: { $0.mainDate > $1.mainDate }).map { event in
             EventRowViewModel(
                 id: event.id.id,
                 name: event.name,

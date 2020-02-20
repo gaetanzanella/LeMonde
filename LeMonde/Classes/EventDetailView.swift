@@ -37,6 +37,9 @@ struct EventDetailView<Presenter: EventDetailPresenter>: View {
                 }
                 Spacer()
                 Text(presenter.viewModel.registrationDate.label)
+                Button("show_event_action_title") {
+                    self.presenter.show()
+                }
             }
             .padding()
         }

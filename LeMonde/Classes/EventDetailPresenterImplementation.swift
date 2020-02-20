@@ -46,6 +46,11 @@ class EventDetailPresenterImplementation: EventDetailPresenter {
         reload()
     }
 
+    func show() {
+        guard let event = event else { return }
+        EventDeeplink().open(event)
+    }
+
     private func reload() {
         guard let id = id else { return }
         event = store.fetchEvent(with: Event.ID(id: id))
