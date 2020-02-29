@@ -31,6 +31,10 @@ class EventCalendar {
         ekEvent.title = event.name
         ekEvent.notes = event.id.id
         ekEvent.calendar = store.leMondeCalendar()
+        let alarm1 = EKAlarm(relativeOffset: 30 * 60)
+        let alarm2 = EKAlarm(relativeOffset: 1 * 60)
+        ekEvent.addAlarm(alarm1)
+        ekEvent.addAlarm(alarm2)
         if #available(OSX 10.14, *) {
             do {
                 try store.save(ekEvent, span: .thisEvent)

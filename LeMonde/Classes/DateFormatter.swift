@@ -12,7 +12,7 @@ extension DateFormatter {
 
     static let long: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
+        formatter.dateFormat = "MMM d, HH:mm"
         return formatter
     }()
 

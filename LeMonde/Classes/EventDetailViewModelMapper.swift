@@ -16,10 +16,26 @@ struct EventDetailViewModelMapper {
         EventDetailViewModel(
             id: event.id.id,
             name: event.name,
-            eventType: event.type,
+            place: event.place?.name,
+            image: event.imageURL,
+            tags: event.status.tags() + [TagViewModel(text: event.type)],
             dates: event.dates.map { DateViewModelMapper(date: $0).long() },
             registrationDate: DateViewModelMapper(date: event.registrationLimitDate).long(),
             description: event.description
         )
+    }
+}
+
+private extension Event.Status {
+
+    func tags() -> [TagViewModel] {
+        switch self {
+        case .available:
+            return []
+        case .full:
+            return [TagViewModel(text: "event_status_full".lm_localized())]
+        case .cancel:
+            return [TagViewModel(text: "event_status_cancel".lm_localized())]
+        }
     }
 }

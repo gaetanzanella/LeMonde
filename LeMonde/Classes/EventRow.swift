@@ -17,7 +17,7 @@ struct EventRow: View {
             VStack(alignment: .leading) {
                 Text(event.name)
                 Text(event.date.label)
-            }
+            }.foregroundColor(event.isIndicative ? .lm_secondaryLabel : .lm_label)
             Spacer()
             if event.isFavorite {
                 Image("star").resizable().frame(width: 15, height: 15)
@@ -34,6 +34,7 @@ struct EventRow_Preview: PreviewProvider {
                 id: "A",
                 name: "Deux amoureux Paris",
                 isFavorite: true,
+                isIndicative: false,
                 date: DateViewModel(label: "23 Janvier")
             )
         ).frame(width: 400)

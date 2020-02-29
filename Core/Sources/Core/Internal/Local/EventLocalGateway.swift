@@ -29,7 +29,8 @@ class EventLocalGateway {
             let events = try JSONDecoder().decode([LocalEvent].self, from: data)
             return events.map { LocalEventToEventMapper(resource: $0).map() }
         } catch {
-            fatalError()
+            try? FileManager.default.removeItem(at: fileURL)
+            return []
         }
     }
 

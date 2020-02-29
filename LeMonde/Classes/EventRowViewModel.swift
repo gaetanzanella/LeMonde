@@ -12,5 +12,6 @@ struct EventRowViewModel: Identifiable, Hashable {
     let id: String
     let name: String
     let isFavorite: Bool
+    let isIndicative: Bool
     let date: DateViewModel
 }

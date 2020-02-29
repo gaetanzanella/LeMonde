@@ -24,6 +24,13 @@ struct EventDetailView<Presenter: EventDetailPresenter>: View {
     var body: some View {
         VStack {
             ScrollView {
+                presenter.viewModel.image.flatMap { image in
+                    HStack {
+                        URLImageView(image).frame(height: 200)
+                        Spacer()
+                    }
+                    .padding([.leading, .top])
+                }
                 VStack(alignment: .leading, spacing: 8.0) {
                     EventHeaderView(detail: presenter.viewModel)
                     Text(presenter.viewModel.description)

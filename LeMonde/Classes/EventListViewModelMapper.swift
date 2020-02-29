@@ -19,6 +19,7 @@ struct EventListViewModelMapper {
                 id: event.id.id,
                 name: event.name,
                 isFavorite: event.isFavorite,
+                isIndicative: !(event.status == .available),
                 date: DateViewModelMapper(date: event.mainDate).short()
             )
         }
