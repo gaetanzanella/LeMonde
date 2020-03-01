@@ -16,7 +16,13 @@ struct EventListView<Presenter: EventListPresenter>: View {
     var body: some View {
         VStack(spacing: 0) {
             List(presenter.events, id: \.id, selection: $selectedEvent) { event in
-                EventRow(event: event)
+                EventRow(event: event).contextMenu {
+                    Button(action: {
+                        self.presenter.toggleEvent(event.id)
+                    }) {
+                        Text(event.isFavorite ? "cancel_action_title" : "schedule_action_title")
+                    }
+                }
             }
             EventActivityIndicatorFooter(
                 text: presenter.footerText,

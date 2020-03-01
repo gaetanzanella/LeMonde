@@ -48,6 +48,16 @@ class EventListPresenterImplementation: EventListPresenter {
         }
     }
 
+    func toggleEvent(_ id: String) {
+        let id = Event.ID(id: id)
+        guard let event = store.fetchEvent(with: id) else { return }
+        if event.isFavorite {
+            store.removeFromFavorites(event)
+        } else {
+            store.addToFavorite(event)
+        }
+    }
+
     private func reloadView() {
         events = EventListViewModelMapper(events: self.store.fetchEvents()).viewModels()
     }

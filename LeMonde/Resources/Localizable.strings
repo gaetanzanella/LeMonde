@@ -13,3 +13,5 @@
 "event_status_cancel" = "ANNULÉ";
 "synchronization_error_label" = "Erreur de synchronization…";
 "ok_action_title" = "OK";
+"schedule_action_title" = "Schedule";
+"cancel_action_title" = "Cancel";

@@ -19,4 +19,5 @@ protocol EventListPresenter: ObservableObject {
 
     func start()
     func refresh()
+    func toggleEvent(_ id: String)
 }
