@@ -37,14 +37,18 @@ public class EventStore {
 
     // MARK: - Public
 
-    public func synchronize(completion: @escaping () -> Void) {
+    public func synchronize(completion: @escaping (Result<Void, Error>) -> Void) {
         eventGateway.fetchLastestEvents { result in
             switch result {
-            case .failure:
-                break
+            case let .failure(error):
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
             case let .success(events):
                 self.handleEventsFetch(events)
-                completion()
+                DispatchQueue.main.async {
+                    completion(.success(()))
+                }
             }
             self.notifyObserver()
         }

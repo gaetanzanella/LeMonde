@@ -11,3 +11,5 @@
 "event_status_available" = "DISPONIBLE";
 "event_status_full" = "COMPLET";
 "event_status_cancel" = "ANNULÉ";
+"synchronization_error_label" = "Erreur de synchronization…";
+"ok_action_title" = "OK";

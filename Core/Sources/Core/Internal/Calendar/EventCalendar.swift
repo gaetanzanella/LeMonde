@@ -28,11 +28,11 @@ class EventCalendar {
         ekEvent.startDate = ekEventStartDate(for: event)
         ekEvent.endDate = ekEventEndDate(for: event)
         ekEvent.url = event.url
-        ekEvent.title = event.name
+        ekEvent.title = "LM REGISTRATION - \(event.name)"
         ekEvent.notes = event.id.id
         ekEvent.calendar = store.leMondeCalendar()
-        let alarm1 = EKAlarm(relativeOffset: 30 * 60)
-        let alarm2 = EKAlarm(relativeOffset: 1 * 60)
+        let alarm1 = EKAlarm(relativeOffset: -30 * 60)
+        let alarm2 = EKAlarm(relativeOffset: -3 * 60)
         ekEvent.addAlarm(alarm1)
         ekEvent.addAlarm(alarm2)
         if #available(OSX 10.14, *) {

@@ -23,11 +23,3 @@ struct RESTEvent: Decodable {
     let event_place_name: String?
     let event_postal_code: String?
 }
-
-struct RESTStatusEvent: Decodable {
-    let event_id: String
-    let event_status: String
-    let event_address: String
-    let event_place_name: String
-    let event_postal_code: String
-}

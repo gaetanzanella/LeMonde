@@ -13,5 +13,10 @@ protocol EventListPresenter: ObservableObject {
 
     var events: [EventRowViewModel] { get }
 
+    var footerText: String { get }
+    var isLoading: Bool { get }
+    var hasError: Bool { get set }
+
     func start()
+    func refresh()
 }

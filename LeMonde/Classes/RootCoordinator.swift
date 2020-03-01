@@ -9,6 +9,30 @@
 import Cocoa
 import SwiftUI
 
+//struct MainView: View {
+//
+//    @State private var showingWelcome = false
+//
+//    let rows = ["A", "B"]
+//
+//    var body: some View {
+//        ZStack(alignment: .leading) {
+//            List(rows, id: \.self) {
+//                Text($0)
+//            }
+//            Toggle(isOn: $showingWelcome) {
+//                Text("Toggle label")
+//            }
+//            if showingWelcome {
+//                VStack {
+//                    Spacer()
+//                    EventActivityIndicatorFooter()
+//                }.transition(.move(edge: .bottom)).animation(.easeInOut)
+//            }
+//        }.frame(minWidth: 300, minHeight: 300)
+//    }
+//}
+
 class RootCoordinator {
 
     weak var window: NSWindow?

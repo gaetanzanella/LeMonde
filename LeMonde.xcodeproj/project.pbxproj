@@ -12,6 +12,10 @@
 		E71B048A23F9633B003BD598 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71B048923F9633B003BD598 /* StatusView.swift */; };
 		E732662723FF051300C7A919 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732662623FF051300C7A919 /* URLImageView.swift */; };
 		E764D4B9240AA6DE0057B7AC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D4B8240AA6DE0057B7AC /* String+Localized.swift */; };
+		E764D4BB240AABE10057B7AC /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D4BA240AABE10057B7AC /* ActivityIndicatorView.swift */; };
+		E764D4BD240AAD460057B7AC /* EventActivityIndicatorFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D4BC240AAD460057B7AC /* EventActivityIndicatorFooter.swift */; };
+		E764D4BF240BBC300057B7AC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = E764D4BE240BBC300057B7AC /* Localizable.stringsdict */; };
+		E764D4C1240BC1270057B7AC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D4C0240BC1270057B7AC /* AlertView.swift */; };
 		E7A17250240049B4002285B6 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A1724F240049B4002285B6 /* TagViewModel.swift */; };
 		E7AB00A123EEDB1500C39FC8 /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */; };
 		E7AB00A523EEDE4200C39FC8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = E7AB00A423EEDE4200C39FC8 /* Core */; };
@@ -47,6 +51,10 @@
 		E71B048923F9633B003BD598 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		E732662623FF051300C7A919 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		E764D4B8240AA6DE0057B7AC /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		E764D4BA240AABE10057B7AC /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		E764D4BC240AAD460057B7AC /* EventActivityIndicatorFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventActivityIndicatorFooter.swift; sourceTree = "<group>"; };
+		E764D4BE240BBC300057B7AC /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		E764D4C0240BC1270057B7AC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		E7A1724F240049B4002285B6 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		E7AB00A023EEDB1500C39FC8 /* EventHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
 		E7AB00A223EEDC6B00C39FC8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
@@ -95,6 +103,8 @@
 			children = (
 				E71B048923F9633B003BD598 /* StatusView.swift */,
 				E732662623FF051300C7A919 /* URLImageView.swift */,
+				E764D4BA240AABE10057B7AC /* ActivityIndicatorView.swift */,
+				E764D4C0240BC1270057B7AC /* AlertView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -181,6 +191,7 @@
 			children = (
 				E7DF773723EB25F7005BE0F2 /* Preview Assets.xcassets */,
 				E7DF778B23EDABB0005BE0F2 /* Localizable.strings */,
+				E764D4BE240BBC300057B7AC /* Localizable.stringsdict */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 			children = (
 				E7DF774823EB266E005BE0F2 /* EventListView.swift */,
 				E7DF777F23ED9A5A005BE0F2 /* EventRow.swift */,
+				E764D4BC240AAD460057B7AC /* EventActivityIndicatorFooter.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -404,6 +416,7 @@
 				E7DF773B23EB25F7005BE0F2 /* Main.storyboard in Resources */,
 				E7DF773823EB25F7005BE0F2 /* Preview Assets.xcassets in Resources */,
 				E7DF773523EB25F7005BE0F2 /* Assets.xcassets in Resources */,
+				E764D4BF240BBC300057B7AC /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +441,9 @@
 				E7A17250240049B4002285B6 /* TagViewModel.swift in Sources */,
 				E7DF776023EB2844005BE0F2 /* EventListPresenter.swift in Sources */,
 				E7DF777723ED968F005BE0F2 /* RootView.swift in Sources */,
+				E764D4BD240AAD460057B7AC /* EventActivityIndicatorFooter.swift in Sources */,
 				E7AB00B423EF13C500C39FC8 /* EventListViewModelMapper.swift in Sources */,
+				E764D4BB240AABE10057B7AC /* ActivityIndicatorView.swift in Sources */,
 				E7DF777D23ED9A1F005BE0F2 /* EventDetailPresenter.swift in Sources */,
 				E732662723FF051300C7A919 /* URLImageView.swift in Sources */,
 				E7AB00AB23EF03B200C39FC8 /* RootCoordinator.swift in Sources */,
@@ -438,6 +453,7 @@
 				E7DF778023ED9A5A005BE0F2 /* EventRow.swift in Sources */,
 				E7DF777A23ED99EA005BE0F2 /* EventDetailView.swift in Sources */,
 				E7AB00A823EF029E00C39FC8 /* DependencyProvider.swift in Sources */,
+				E764D4C1240BC1270057B7AC /* AlertView.swift in Sources */,
 				E7DF776223EB28DB005BE0F2 /* EventRowViewModel.swift in Sources */,
 				E7DF774923EB266F005BE0F2 /* AppDelegate.swift in Sources */,
 			);

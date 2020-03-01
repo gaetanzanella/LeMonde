@@ -14,10 +14,23 @@ struct EventListView<Presenter: EventListPresenter>: View {
     @Binding var selectedEvent: EventRowViewModel.ID?
 
     var body: some View {
-        List(presenter.events, id: \.id, selection: $selectedEvent) { event in
-            EventRow(event: event)
+        VStack(spacing: 0) {
+            List(presenter.events, id: \.id, selection: $selectedEvent) { event in
+                EventRow(event: event)
+            }
+            EventActivityIndicatorFooter(
+                text: presenter.footerText,
+                isAnimating: presenter.isLoading,
+                action: {
+                    self.presenter.refresh()
+                }
+            )
         }.onAppear {
             self.presenter.start()
-        }
+        }.sheet(isPresented: $presenter.hasError, content: {
+            AlertView(text: "synchronization_error_label", actionText: "ok_action_title") {
+                self.presenter.hasError = false
+            }
+        })
     }
 }
